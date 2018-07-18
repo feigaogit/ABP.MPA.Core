@@ -20,7 +20,7 @@ namespace MPACore.PhoneBook.Migrations
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
                     CreationTime = table.Column<DateTime>(nullable: false),
                     CreatorUserId = table.Column<long>(nullable: true),
-                    LastModificationTime = table.Column<DateTime>(nullable: true),
+                    LastModificationTime = table.Column<DateTime>(nullable: true), 
                     LastModifierUserId = table.Column<long>(nullable: true),
                     DeleterUserId = table.Column<long>(nullable: true),
                     DeletionTime = table.Column<DateTime>(nullable: true),
