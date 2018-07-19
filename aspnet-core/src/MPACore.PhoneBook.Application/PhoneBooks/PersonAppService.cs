@@ -14,6 +14,11 @@ namespace MPACore.PhoneBook.PhoneBooks
     {
         private readonly IRepository<Person> _personRepository;
 
+        public PersonAppService(IRepository<Person> personRepository)
+        {
+            _personRepository = personRepository;
+        }
+
         public Task CreateOrUpdatePersonAsync()
         {
             throw new NotImplementedException();
