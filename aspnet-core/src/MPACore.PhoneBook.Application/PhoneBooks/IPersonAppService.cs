@@ -21,13 +21,13 @@ namespace MPACore.PhoneBook.PhoneBooks
         /// 根据id获取相关信息
         /// </summary>
         /// <returns></returns>
-        Task<PersonListDto> GetPersonByIdAsync();
+        Task<PersonListDto> GetPersonByIdAsync(NullableIdDto input);
 
         /// <summary>
         /// 新增或更改联系人信息
         /// </summary>
         /// <returns></returns>
-        Task CreateOrUpdatePersonAsync();
+        Task CreateOrUpdatePersonAsync(CreateOrUpdatePersonInput input);
 
         Task DeletePersonAsync(EntityDto input);
     }

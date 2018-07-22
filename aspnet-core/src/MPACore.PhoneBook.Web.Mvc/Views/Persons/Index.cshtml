@@ -2,12 +2,15 @@
 @using MPACore.PhoneBook.Web.Startup
 @model MPACore.PhoneBook.Web.Models.Users.UserListViewModel
 @{
-    ViewBag.CurrentPageName = PageNames.Users; // The menu item will be active for this page.
+    ViewBag.CurrentPageName = PageNames.Persons; // The menu item will be active for this page.
 }
 @section scripts
-{
+    {
     <environment names="Development">
-        <script src="~/view-resources/Views/Persons/Index.js" asp-append-version="true"></script>
+        <script src="~/view-resources/Views/Users/Index.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/view-resources/Views/Users/Index.min.js" asp-append-version="true"></script>
     </environment>
 }
 <div class="row clearfix">
@@ -173,11 +176,9 @@
         </div>
     </div>
 </div>
-
 <div class="modal fade" id="UserEditModal" tabindex="-1" role="dialog" aria-labelledby="UserEditModalLabel" data-backdrop="static">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-
         </div>
     </div>
 </div>
